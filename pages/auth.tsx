@@ -77,9 +77,8 @@ const Auth = () => {
                 onChange={(ev: any) => setPassword(ev.target.value)}
             />
             </div>
-            <button onClick={register} 
-            /* button onClick={variant === 'login' ? login : register} */ className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition">
-            Login
+            <button onClick={register} className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition">
+            {variant === 'login' ? 'Sign in' : 'Register'}
             </button>
             <p className="text-neutral-500 mt-12">
               {variant === 'login' ? 'First time using Netflix?' : 'Already have an account?'}
