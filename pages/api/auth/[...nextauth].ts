@@ -6,6 +6,12 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { compare } from 'bcrypt';
 import prismadb from '@/lib/prismadb';
 
+/* console.log('NextAuth file is being executed');
+console.log(process.env.NEXTAUTH_SECRET);
+
+console.log('Google client ID:', process.env.GOOGLE_CLIENT_ID);
+console.log('Google client secret:', process.env.GOOGLE_CLIENT_SECRET); */
+
 export const authOptions: AuthOptions = {
   providers: [
     GithubProvider({
