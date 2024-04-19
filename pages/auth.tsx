@@ -98,11 +98,11 @@ const Auth = () => {
                 type="password"
                 value={password}
                 onChange={(ev: any) => setPassword(ev.target.value)}
-                onKeyDown={(ev: any) => {
+                /* onKeyDown={(ev: any) => {
                   if (ev.key === "Enter") {
                     variant === "login" ? login() : register();
                   }
-                }}
+                }} */
               />
 
             </div>
