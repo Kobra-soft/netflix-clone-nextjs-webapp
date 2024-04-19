@@ -10,7 +10,9 @@ interface InputProps {
   onKeyDown?: (event: React.KeyboardEvent) => void;
 }
 
-const InputWithKeyDown: React.FC<InputProps & React.InputHTMLAttributes<HTMLInputElement>> = ({ onKeyDown, ...otherProps }) => {
+const InputWithKeyDown: React.FC<
+  InputProps & React.InputHTMLAttributes<HTMLInputElement>
+> = ({ onKeyDown, ...otherProps }) => {
   return (
     <input
       // ...otherProps
@@ -72,12 +74,12 @@ const Auth = () => {
             </h2>
             <div className="flex flex-col gap-4">
               {variant === "register" && (
-                <Input
-                  id="name"
-                  label="Username"
-                  value={name}
-                  onChange={(ev: any) => setName(ev.target.value)}
-                />
+              <Input
+                id="name"
+                label="Username"
+                value={name}
+                onChange={(ev: any) => setName(ev.target.value)}
+              />
               )}
               <Input
                 id="email"
@@ -98,7 +100,6 @@ const Auth = () => {
                   }
                 }} */
               />
-
             </div>
             <button
               onClick={variant === "login" ? login : register}
