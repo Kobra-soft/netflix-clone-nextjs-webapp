@@ -35,7 +35,6 @@ const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
         placeholder=" " 
       />
       <label 
-        /* htmlFor={id}  */
         className="
         absolute 
         text-md

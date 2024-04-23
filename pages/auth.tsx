@@ -6,7 +6,6 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
 interface InputProps {
-  // ...other props
   onKeyDown?: (event: React.KeyboardEvent) => void;
   label: string;
 }
@@ -133,13 +132,6 @@ const Auth = () => {
                 value={email}
                 onChange={(ev: any) => setEmail(ev.target.value)}
               />
-{/*               <Input
-                id="password"
-                label="Password"
-                type="password"
-                value={password}
-                onChange={(ev: any) => setPassword(ev.target.value)}
-              /> */}
               <InputWithKeyDown
                 id="password"
                 label="Password"

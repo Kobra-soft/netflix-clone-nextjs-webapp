@@ -4,10 +4,10 @@ import { getServerSession } from "next-auth";
 import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
-import { authOptions } from "@/pages/api/auth/[...nextauth]"
-import { GetServerSidePropsContext } from 'next';
+/* import { authOptions } from "@/pages/api/auth/[...nextauth]"
+import { GetServerSidePropsContext } from 'next'; */
 
-/* export async function getServerSideProps(context: NextPageContext) {
+export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
 
   if (!session) {
@@ -22,9 +22,9 @@ import { GetServerSidePropsContext } from 'next';
   return {
     props: {},
   };
-} */
+}
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+/* export async function getServerSideProps(context: GetServerSidePropsContext) {
   const session = await getServerSession(context.req, context.res, authOptions)
 
   if (!session) {
@@ -41,7 +41,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
       session,
     },
   }
-}
+} */
 
 const Profiles = () => {
   const router = useRouter();
